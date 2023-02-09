@@ -39,3 +39,17 @@ The first line, #!/bin/bash, is called the shebang line and it specifies the loc
 The second line, cd ~, is a command that changes the working directory to the user's home directory. The tilde (~) symbol is a shorthand for the home directory in Unix-like operating systems, so cd ~ changes the current working directory to the user's home directory.
 
 When this script is executed, it will change the current working directory to the user's home directory, regardless of where the script was run from originally. This makes it easier to navigate the file system and access files in the home directory without having to specify the full path name.
+
+
+The following script:
+
+bash
+
+#!/bin/bash
+ls -l
+
+The first line, #!/bin/bash, is called the shebang line and it specifies the location of the interpreter for the script. In this case, the script is interpreted by the Bash shell.
+
+The second line, ls -l, is a command that lists the contents of the current directory in a long format. The -l option tells ls to display the contents in a long format, with each file and subdirectory displayed on a separate line with additional information such as permissions, ownership, and timestamps.
+
+When this script is executed, it will display a list of the files and subdirectories within the current working directory, with additional information displayed for each item in the list. This makes it easier to view and understand the contents of the current directory and the properties of each file and subdirectory.
