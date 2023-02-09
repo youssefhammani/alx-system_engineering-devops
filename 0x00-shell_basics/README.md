@@ -381,3 +381,14 @@ So, if you want to list all the files, including hidden files, and show file siz
 
 
 		-------------------------------------------------------------
+
+
+
+about file school.mgc
+
+This is a shell script that is being executed on an Ubuntu system. The script performs the following tasks:
+
+Makes a copy of the /bin/ls executable and places it in the current directory.
+Runs the ls command with the -la option to list the files in the current directory and their attributes.
+Runs the file command with the --mime-type and -m options, specifying the school.mgc magic file as the file to use for detecting the type of the files in the current directory.
+The file command is used to identify the type of the files in the directory. With the --mime-type option, the file command returns the MIME type of the files. With the -m option and the school.mgc magic file specified, the file command returns the type of the files based on the information in the magic file. The output of the file command shows that the school.mgc file is an application/octet-stream, the ls file is also an application/octet-stream, the thisisaschoolfile file is identified as School, and the thisisatextfile file is identified as ASCII text.
