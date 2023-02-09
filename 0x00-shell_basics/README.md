@@ -355,3 +355,29 @@ Note that mkdir can be used to create a single directory or multiple directories
 
 
 		--------------------------------------------------------------
+
+
+
+The following script:
+
+bash
+
+--------------------
+|  #!/bin/bash     |
+|  ls -map         |
+--------------------
+
+
+The ls -map command is not a recognized option for the ls command. The ls command is used to list the files and directories in a directory.
+
+There are several commonly used options for the ls command:
+
+-a or --all: Show all files, including hidden files (those starting with a dot .)
+-l or --long: List files in a long format, displaying detailed information about each file, including permissions, owner, group, size, timestamps, and filename
+-h or --human-readable: Show file sizes in human-readable format, e.g. 1K, 234M, 2G, etc.
+-r or --reverse: Reverse the order of the file listing
+-t or --sort-time: Sort files by modification time, newest first
+So, if you want to list all the files, including hidden files, and show file sizes in human-readable format, you can use the command ls -alh.
+
+
+		-------------------------------------------------------------
