@@ -268,3 +268,17 @@ So, in summary, the command cp -un *.html ../ copies all the HTML files in the c
 
 
 		--------------------------------------------------------------------
+
+
+The following script:
+
+bash
+
+#!/bin/bash
+mv [A-Z]* /tmp/u
+
+
+This is a command that moves all files in the current working directory that begin with an uppercase letter to the directory "/tmp/u". The command uses the mv command, which is used to move files from one location to another. The [A-Z]* is a regular expression that matches all filenames in the current working directory that start with an uppercase letter. The /tmp/u at the end of the command is the destination directory where the matched files will be moved to.
+
+
+		---------------------------------------------------------------
