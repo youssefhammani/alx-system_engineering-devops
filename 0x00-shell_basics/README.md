@@ -212,3 +212,17 @@ The command ls -la . .. /boot lists the contents of the current directory (.), t
 
 
 		-----------------------------------------------------------------
+
+
+The following script:
+
+bash
+
+#!/bin/bash
+file /tmp/iamafile
+
+
+The command file /tmp/iamafile is used to determine the type of the file named iamafile located in the /tmp directory. The file utility checks the contents of the file and reports what it believes the type of the file is based on the format and structure of the data stored in the file. The output from the file command provides information about the type of file, such as whether it's an executable file, a text file, an image file, etc. This information is useful in determining how to process or handle the file in question.
+
+
+		---------------------------------------------------------------
