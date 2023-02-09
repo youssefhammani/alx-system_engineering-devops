@@ -177,3 +177,24 @@ This script uses the cd command with the - option, which changes the working dir
 
 
 		-----------------------------------------------------------
+
+
+The following script:
+
+bash
+
+#!/bin/bash
+ls -al ../.. /boot;
+
+
+The command ls -al ../.. /boot lists all files in the long format (-al option) in three directories:
+
+The parent of the parent directory of the current directory (../..)
+The current directory (.)
+The /boot directory (/boot)
+The ls command is used to list the contents of a directory. The -a option tells ls to display hidden files, which are normally hidden because their names start with a dot (.). The -l option tells ls to display the contents in long format, which includes information such as file permissions, owner, size, and timestamps.
+
+So this command will display all files, including hidden files, in the long format in the current directory, the parent of the parent directory of the current directory, and the /boot directory.
+
+
+		---------------------------------------------------------------
