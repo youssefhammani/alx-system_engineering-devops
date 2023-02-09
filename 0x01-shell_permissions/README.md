@@ -48,3 +48,17 @@ Explain what this command does  "touch hello"
 
 
 The touch command is used in Unix-like operating systems, including Linux, to create new, empty files or to update the modification and access timestamps of existing files. When you run the command touch hello, it creates a new, empty file named hello in the current directory. If the file hello already exists, touch updates its timestamps to the current date and time without changing its contents. The touch command is often used as a basic way to create new files, or to ensure that files are updated to reflect changes made to them, such as changes to their permissions or ownership.
+
+
+		---------------------------------------------------------
+
+
+
+Explain what this command does  "touch hello"
+
+
+The command chmod u+x hello is a shell command used to change the permissions of the file hello. The chmod command stands for "change mode", and it is used to modify the permissions of files and directories in Unix-like operating systems.
+
+The u+x argument passed to the chmod command means to add execute permission to the owner of the file. The u represents the owner, and the +x means to add execute permission. The + symbol is used to add the permission, and the x represents the execute permission.
+
+So, in this case, the chmod u+x hello command adds execute permission to the owner of the file hello. This means that the owner of the file will now be able to execute the file as a program.
