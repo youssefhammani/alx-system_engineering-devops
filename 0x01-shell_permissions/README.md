@@ -13,3 +13,16 @@ The su command is commonly used by system administrators to switch to other user
 Explain what this command does  "su betty"
 
 whoami is a command in Unix-like operating systems that prints the effective username of the current user to the standard output. The effective user is the user whose permissions and identity are used by the system to determine the actions that can be taken by the current process. This is usually the same as the real user, but can be different in certain situations, such as when using the su command to switch to another user. By running the whoami command, you can see the username of the current user and confirm that you are running commands with the expected identity.
+
+
+		--------------------------------------------------
+
+
+Explain what this command does  "su betty"
+
+
+The groups command is used to display the groups a user belongs to. It shows a list of all the groups to which the current user belongs, as well as all the groups associated with the current process.
+
+For example, if you run groups in your terminal, you will see a list of all the groups that the user running the terminal is a member of. This information is taken from the system's user and group databases, such as the /etc/passwd and /etc/group files on most Unix-like systems.
+
+The groups command is useful for understanding the user's access to system resources and the permissions they have to perform certain actions, as access to resources and the ability to perform certain actions are often restricted based on group membership.
