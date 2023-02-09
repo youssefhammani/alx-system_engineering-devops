@@ -80,3 +80,14 @@ ls -lan
 The second line, ls -lan, is a command that lists the contents of the current directory, including hidden files, in a long format with user and group IDs displayed numerically. The -l option tells ls to display the contents in a long format, with each file and subdirectory displayed on a separate line with additional information such as permissions, ownership, and timestamps. The -a option tells ls to include hidden files in the output. The -n option tells ls to display user and group IDs numerically, rather than as names.
 
 When this script is executed, it will display a list of all the files and subdirectories within the current working directory, including hidden files, with additional information displayed for each item in the list, including the numeric user and group IDs. This makes it easier to view and understand the complete contents of the current directory, including hidden files, and the properties of each file and subdirectory.
+
+
+The following script:
+
+bash
+
+#!/bin/bash
+mkdir /tmp/my_first_directory
+
+
+This script uses the `mkdir` command to create a directory in the specified path `/tmp/my_first_directory`.
