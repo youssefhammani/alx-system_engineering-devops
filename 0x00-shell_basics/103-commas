@@ -1,0 +1,2 @@
+#!/bin/bash
+ls -A | sort -t . -k 1.4n -k 1.3n -k 1.1n | awk -F '/' '{print $1}' | awk '{if ($0 == ".") {printf "%s, ", $0} else if ($0 == "..") {printf "%s, ", $0} else if (index($0, "/") == 0) {printf "%s, ", $0} else {printf "%s/,", $0}} END {printf "\n"}'

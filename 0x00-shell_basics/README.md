@@ -2,8 +2,10 @@ The following script:
 
 bash
 
-#!/bin/bash
-echo "$(pwd)"
+--------------------
+|  #!/bin/bash     |
+|  echo "$(pwd)"   |
+--------------------
 
 is a Bash script that prints the current working directory.
 
@@ -22,8 +24,10 @@ The following script:
 
 bash
 
-#!/bin/bash
-ls
+------------------
+|  #!/bin/bash   |
+|  ls            | 
+------------------
 
 is used to display the contents list of the current directory. The script is written in the Bash shell scripting language and uses the ls command to list the contents of the current directory.
 
@@ -38,8 +42,10 @@ The following script:
 
 bash
 
-#!/bin/bash
-cd ~
+------------------
+|  #!/bin/bash   |
+|  cd ~          |
+------------------
 
 The first line, #!/bin/bash, is called the shebang line and it specifies the location of the interpreter for the script. In this case, the script is interpreted by the Bash shell.
 
@@ -56,8 +62,10 @@ The following script:
 
 bash
 
-#!/bin/bash
-ls -l
+-------------------
+|  #!/bin/bash    |
+|  ls -l          |
+-------------------
 
 The first line, #!/bin/bash, is called the shebang line and it specifies the location of the interpreter for the script. In this case, the script is interpreted by the Bash shell.
 
@@ -74,8 +82,10 @@ The following script:
 
 bash
 
-#!/bin/bash
-ls -la
+------------------
+|  #!/bin/bash   |
+|  ls -la        |
+------------------
 
 
 The second line, ls -la, is a command that lists the contents of the current directory, including hidden files, in a long format. The -l option tells ls to display the contents in a long format, with each file and subdirectory displayed on a separate line with additional information such as permissions, ownership, and timestamps. The -a option tells ls to include hidden files in the output.
@@ -91,8 +101,10 @@ The following script:
 
 bash
 
-#!/bin/bash
-ls -lan
+-------------------
+|  #!/bin/bash    |
+|  ls -lan        |
+-------------------
 
 
 The second line, ls -lan, is a command that lists the contents of the current directory, including hidden files, in a long format with user and group IDs displayed numerically. The -l option tells ls to display the contents in a long format, with each file and subdirectory displayed on a separate line with additional information such as permissions, ownership, and timestamps. The -a option tells ls to include hidden files in the output. The -n option tells ls to display user and group IDs numerically, rather than as names.
@@ -108,8 +120,10 @@ The following script:
 
 bash
 
-#!/bin/bash
-mkdir /tmp/my_first_directory
+------------------------------------
+|  #!/bin/bash                     |
+|  mkdir /tmp/my_first_directory   |
+------------------------------------
 
 
 This script uses the `mkdir` command to create a directory in the specified path `/tmp/my_first_directory`.
@@ -123,8 +137,10 @@ The following script:
 
 bash
 
-#!/bin/bash
-mv /tmp/betty /tmp/my_first_directory
+--------------------------------------------
+|  #!/bin/bash                             |
+|  mv /tmp/betty /tmp/my_first_directory   |
+--------------------------------------------
 
 
 This script uses the `mv` command to move the file betty from the `/tmp/` directory to the 	`/tmp/my_first_directory` directory.
@@ -137,8 +153,10 @@ The following script:
 
 bash
 
-#!/bin/bash
-rm /tmp/my_first_directory/betty
+----------------------------------------
+|  #!/bin/bash                         |
+|  rm /tmp/my_first_directory/betty    |
+----------------------------------------
 
 
 This script uses the `rm` command to remove the file `betty` from the `/tmp/my_first_directory` directory.
@@ -151,8 +169,10 @@ The following script:
 
 bash
 
-#!/bin/bash
-rm -rf /tmp/my_first_directory
+-------------------------------------
+|  #!/bin/bash                      |
+|  rm -rf /tmp/my_first_directory   |
+-------------------------------------
 
 
 rm -rf /tmp/my_first_directory is a shell command that is used to delete a directory and all its contents. The command rm is used to remove files and directories, and the options -r and -f are used to remove a directory and its contents, and to force the removal without confirmation, respectively.
@@ -169,8 +189,10 @@ The following script:
 
 bash
 
-#!/bin/bash
-cd -
+-----------------
+|  #!/bin/bash  |
+|  cd -         |
+-----------------
 
 
 This script uses the cd command with the - option, which changes the working directory to the previous one in the directory stack.
@@ -183,9 +205,10 @@ The following script:
 
 bash
 
-#!/bin/bash
-ls -al ../.. /boot;
-
+--------------------------
+|  #!/bin/bash           |
+|  ls -al ../.. /boot;   |
+--------------------------
 
 The command ls -al ../.. /boot lists all files in the long format (-al option) in three directories:
 
@@ -204,8 +227,10 @@ The following script:
 
 bash
 
-#!/bin/bash
-ls -la . .. /boot
+-----------------------
+|  #!/bin/bash        |
+|  ls -la . .. /boot  |
+-----------------------
 
 
 The command ls -la . .. /boot lists the contents of the current directory (.), the parent of the current directory (..), and the /boot directory (/boot), in long format. The -l option specifies that the output should be in long format, which includes the file permissions, number of links, owner and group, size, and date of modification, among other things. The -a option includes files that are normally hidden from view, as they start with a period (.) character. The contents of each of the directories will be displayed one after the other in the order specified on the command line.
@@ -218,8 +243,10 @@ The following script:
 
 bash
 
-#!/bin/bash
-file /tmp/iamafile
+-------------------------
+|  #!/bin/bash          |
+|  file /tmp/iamafile   |
+-------------------------
 
 
 The command file /tmp/iamafile is used to determine the type of the file named iamafile located in the /tmp directory. The file utility checks the contents of the file and reports what it believes the type of the file is based on the format and structure of the data stored in the file. The output from the file command provides information about the type of file, such as whether it's an executable file, a text file, an image file, etc. This information is useful in determining how to process or handle the file in question.
@@ -232,8 +259,10 @@ The following script:
 
 bash
 
-#!/bin/bash
-ln -s /bin/ls __ls__
+---------------------------
+|  #!/bin/bash            |
+|  ln -s /bin/ls __ls__   |
+---------------------------
 
 
 The command ln -s /bin/ls __ls__ creates a symbolic link in the current working directory with the name __ls__, which points to the file /bin/ls.
@@ -250,9 +279,10 @@ The following script:
 
 bash
 
-#!/bin/bash
-cp -un *.tml ../
-
+------------------------
+|  #!/bin/bash         |
+|  cp -un *.tml ../    |
+------------------------
 
 The command cp -un *.html ../ is a shell command used to copy HTML files (files with the extension ".html") from the current working directory to the parent directory of the working directory. The options -u and -n are used as follows:
 
@@ -274,9 +304,10 @@ The following script:
 
 bash
 
-#!/bin/bash
-mv [A-Z]* /tmp/u
-
+------------------------
+|  #!/bin/bash         |
+|  mv [A-Z]* /tmp/u    |
+------------------------
 
 This is a command that moves all files in the current working directory that begin with an uppercase letter to the directory "/tmp/u". The command uses the mv command, which is used to move files from one location to another. The [A-Z]* is a regular expression that matches all filenames in the current working directory that start with an uppercase letter. The /tmp/u at the end of the command is the destination directory where the matched files will be moved to.
 
@@ -288,9 +319,10 @@ The following script:
 
 bash
 
-#!/bin/bash
-rm *~
-
+------------------
+|  #!/bin/bash   |
+|  rm *~         |
+------------------
 
 The rm *~ command is a one-liner in bash that deletes all files in the current working directory that end with the character ~.
 
@@ -302,3 +334,24 @@ It's important to use this command with caution, as once a file is deleted, it c
 
 
 		------------------------------------------------------------------
+
+
+The following script:
+
+bash
+
+-------------------------------
+|  #!/bin/bash                |
+|  mkdir -p welcome/to/school |
+-------------------------------
+
+The mkdir command is used in the terminal to create a new directory. The -p option is used to create parent directories as needed.
+
+So, the command mkdir -p welcome/to/school creates the directory school and, if they do not exist, the parent directories welcome and to. The -p option allows mkdir to create the entire directory path, including any intermediate directories that do not exist.
+
+This command will create the directory school and its parent directories welcome and to, if they do not already exist. The -p option ensures that the command will not fail if any of the parent directories already exist.
+
+Note that mkdir can be used to create a single directory or multiple directories in one command.
+
+
+		--------------------------------------------------------------
