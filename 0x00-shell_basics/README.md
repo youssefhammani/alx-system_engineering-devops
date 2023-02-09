@@ -131,3 +131,14 @@ This script uses the `mv` command to move the file betty from the `/tmp/` direct
 
 
 		-------------------------------------------------------------------------
+
+
+The following script:
+
+bash
+
+#!/bin/bash
+rm /tmp/my_first_directory/betty
+
+
+This script uses the `rm` command to remove the file `betty` from the `/tmp/my_first_directory` directory.
