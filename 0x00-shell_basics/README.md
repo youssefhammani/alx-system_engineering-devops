@@ -244,3 +244,27 @@ The ln command is used to create links between files, and the -s option specifie
 
 
 		--------------------------------------------------------------------
+
+
+The following script:
+
+bash
+
+#!/bin/bash
+cp -un *.tml ../
+
+
+The command cp -un *.html ../ is a shell command used to copy HTML files (files with the extension ".html") from the current working directory to the parent directory of the working directory. The options -u and -n are used as follows:
+
+-u : This option tells the cp command to copy files only if the source file is newer than the destination file, or if the destination file doesn't exist.
+
+-n : This option tells the cp command to never overwrite an existing file.
+
+*.html : This is a shell globbing pattern that matches all files in the current directory with the extension ".html".
+
+../ : This is the parent directory of the working directory. The ../ syntax is used to refer to the parent directory in a shell.
+
+So, in summary, the command cp -un *.html ../ copies all the HTML files in the current directory to the parent directory, but only if the source file is newer than the destination file, or if the destination file doesn't exist, and without overwriting any existing files in the parent directory.
+
+
+		--------------------------------------------------------------------
