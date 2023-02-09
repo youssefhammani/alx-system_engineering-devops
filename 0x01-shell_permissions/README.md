@@ -54,7 +54,7 @@ The touch command is used in Unix-like operating systems, including Linux, to cr
 
 
 
-Explain what this command does  "touch hello"
+Explain what this command does  "chmod u+x hello"
 
 
 The command chmod u+x hello is a shell command used to change the permissions of the file hello. The chmod command stands for "change mode", and it is used to modify the permissions of files and directories in Unix-like operating systems.
@@ -62,3 +62,17 @@ The command chmod u+x hello is a shell command used to change the permissions of
 The u+x argument passed to the chmod command means to add execute permission to the owner of the file. The u represents the owner, and the +x means to add execute permission. The + symbol is used to add the permission, and the x represents the execute permission.
 
 So, in this case, the chmod u+x hello command adds execute permission to the owner of the file hello. This means that the owner of the file will now be able to execute the file as a program.
+
+
+		-------------------------------------------------------------
+
+
+
+Explain what this command does  "chmod ug+x, o+r hello"
+
+
+The chmod command is used to change the permissions of a file in Unix-like systems. The argument ug+x,o+r specifies the permissions that should be added to the file hello.
+
+The u option refers to the owner of the file, g refers to the group owner of the file, and o refers to other users. The +x option adds execute permission, and the +r option adds read permission.
+
+So, the argument ug+x,o+r means that execute permission should be added for both the owner and the group owner, and read permission should be added for other users.
