@@ -53,3 +53,17 @@ The first line, #!/bin/bash, is called the shebang line and it specifies the loc
 The second line, ls -l, is a command that lists the contents of the current directory in a long format. The -l option tells ls to display the contents in a long format, with each file and subdirectory displayed on a separate line with additional information such as permissions, ownership, and timestamps.
 
 When this script is executed, it will display a list of the files and subdirectories within the current working directory, with additional information displayed for each item in the list. This makes it easier to view and understand the contents of the current directory and the properties of each file and subdirectory.
+
+
+
+The following script:
+
+bash
+
+#!/bin/bash
+ls -la
+
+
+The second line, ls -la, is a command that lists the contents of the current directory, including hidden files, in a long format. The -l option tells ls to display the contents in a long format, with each file and subdirectory displayed on a separate line with additional information such as permissions, ownership, and timestamps. The -a option tells ls to include hidden files in the output.
+
+When this script is executed, it will display a list of all the files and subdirectories within the current working directory, including hidden files, with additional information displayed for each item in the list. This makes it easier to view and understand the complete contents of the current directory, including hidden files, and the properties of each file and subdirectory.
