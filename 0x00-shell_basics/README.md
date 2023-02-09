@@ -282,3 +282,23 @@ This is a command that moves all files in the current working directory that beg
 
 
 		---------------------------------------------------------------
+
+
+The following script:
+
+bash
+
+#!/bin/bash
+rm *~
+
+
+The rm *~ command is a one-liner in bash that deletes all files in the current working directory that end with the character ~.
+
+The rm command is used to remove files or directories in Unix-like operating systems, including Linux and macOS. The *~ is a glob pattern, which is a string that can match one or more filenames. The * matches any string of characters, and the ~ matches the tilde character.
+
+So, when the command rm *~ is executed, it searches for all files in the current working directory that end with ~, and removes them. The * wildcard character is used to match any string of characters, and the ~ matches the tilde character, so this command will remove any file that ends with a tilde in the current working directory.
+
+It's important to use this command with caution, as once a file is deleted, it cannot be easily recovered. It's always a good idea to make a backup of your important files before using the rm command.
+
+
+		------------------------------------------------------------------
