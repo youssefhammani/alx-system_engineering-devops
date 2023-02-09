@@ -38,3 +38,13 @@ Explain what this command does  "chown betty hello"
 The chown command is used in Unix-like systems to change the owner of a file or directory. The syntax of the chown command is chown [OPTION]... [OWNER][:[GROUP]] FILE....
 
 In the given example, chown betty hello changes the owner of the file hello to the user betty. This means that betty will now have full control over the file, including the ability to read, write, and execute the file. The original owner of the file will no longer have any permissions on the file.
+
+
+		----------------------------------------------------
+
+
+
+Explain what this command does  "touch hello"
+
+
+The touch command is used in Unix-like operating systems, including Linux, to create new, empty files or to update the modification and access timestamps of existing files. When you run the command touch hello, it creates a new, empty file named hello in the current directory. If the file hello already exists, touch updates its timestamps to the current date and time without changing its contents. The touch command is often used as a basic way to create new files, or to ensure that files are updated to reflect changes made to them, such as changes to their permissions or ownership.
