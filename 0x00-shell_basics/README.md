@@ -162,4 +162,18 @@ The option -r stands for "recursive" and means that the contents of the director
 So, the command rm -rf /tmp/my_first_directory is used to delete the directory my_first_directory and all its contents, located in the /tmp directory, without any confirmation prompts. This is a powerful and dangerous command, as it can delete an entire directory and all its contents with just one command. Therefore, it should be used with caution and only when you are sure that the contents of the directory can be deleted.
 
 
-		---------------------------------------------------------------
+		--------------------------------------------------------------
+
+
+The following script:
+
+bash
+
+#!/bin/bash
+cd -
+
+
+This script uses the cd command with the - option, which changes the working directory to the previous one in the directory stack.
+
+
+		-----------------------------------------------------------
