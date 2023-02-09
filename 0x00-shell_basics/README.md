@@ -198,3 +198,17 @@ So this command will display all files, including hidden files, in the long form
 
 
 		---------------------------------------------------------------
+
+
+The following script:
+
+bash
+
+#!/bin/bash
+ls -la . .. /boot
+
+
+The command ls -la . .. /boot lists the contents of the current directory (.), the parent of the current directory (..), and the /boot directory (/boot), in long format. The -l option specifies that the output should be in long format, which includes the file permissions, number of links, owner and group, size, and date of modification, among other things. The -a option includes files that are normally hidden from view, as they start with a period (.) character. The contents of each of the directories will be displayed one after the other in the order specified on the command line.
+
+
+		-----------------------------------------------------------------
