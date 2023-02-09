@@ -226,3 +226,21 @@ The command file /tmp/iamafile is used to determine the type of the file named i
 
 
 		---------------------------------------------------------------
+
+
+The following script:
+
+bash
+
+#!/bin/bash
+ln -s /bin/ls __ls__
+
+
+The command ln -s /bin/ls __ls__ creates a symbolic link in the current working directory with the name __ls__, which points to the file /bin/ls.
+
+In Linux and Unix-like operating systems, symbolic links are similar to shortcuts in other operating systems. They allow you to create a new name for a file or directory that points to the original file or directory. When you access the symbolic link, you're actually accessing the file or directory it points to. In this case, the symbolic link __ls__ will behave like the /bin/ls file.
+
+The ln command is used to create links between files, and the -s option specifies that a symbolic link should be created, as opposed to a hard link.
+
+
+		--------------------------------------------------------------------
