@@ -354,3 +354,21 @@ vincent:staff: This argument specifies the owner (vincent) and group owner (staf
 *: This is a wildcard character that matches all files and directories in the current working directory.
 
 So, when the command is executed, it changes the owner and group ownership of all files and directories in the current working directory to vincent and staff, respectively. The change is applied to all files and directories in the current working directory, but not to subdirectories within those files and directories.
+
+
+
+		-----------------------------------------------------
+
+
+
+
+Explain what this command does  "chown -h vincent:staff _hello"
+
+
+The command you're referring to is used in Unix-like operating systems, and specifically the chown command is used to change the owner and group ownership of files and directories.
+
+The command chown -h vincent:staff _hello changes the ownership of the file _hello to vincent as the owner and staff as the group. The -h option is used to change the ownership of a symbolic link itself instead of the file it points to.
+
+So, in this case, if the file _hello is a symbolic link, then the ownership of the symbolic link itself will be changed to vincent and staff. If _hello is not a symbolic link, then the ownership of the file itself will be changed to vincent and staff.
+
+It's important to note that only the superuser or the owner of the file can change the ownership of a file, and the use of the chown command requires appropriate permissions.
