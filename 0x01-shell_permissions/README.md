@@ -274,3 +274,40 @@ Here's a breakdown of the permissions:
 5: read and execute permissions for the group of the directory
 1: execute permission for others (everyone else).
 So, in this command mkdir -m 751 my_dir, the mkdir command creates a directory called my_dir with permissions 751 in the current working directory.
+
+
+
+		--------------------------------------------------------
+
+
+
+
+Explain what this command does  
+
+
+
+1 ==> "chgrp school hello"
+
+
+The chgrp command is used to change the group ownership of a file. The basic syntax for using chgrp is as follows:
+
+				  `chgrp group_name file`
+
+
+In this case, chgrp school hello changes the group ownership of the file hello to school. The school argument is the name of the group to which the file hello will be assigned.
+
+The group ownership of a file determines which group of users has permission to access and modify the file. By changing the group ownership of a file, you can control which group of users has access to it. If the user running the chgrp command has the necessary permissions, the group ownership of the file hello will be changed to school.
+
+
+
+
+2 ==> "sudo chown :school hello"
+
+
+The sudo chown command is used to change the owner and group ownership of a file. The basic syntax for using sudo chown is as follows:
+
+
+						sudo chown owner:group file
+
+
+n this case, sudo chown :school hello changes the group ownership of the file hello to school, while leaving the owner unchanged. The :school argument specifies the group ownership to be set for the file hello, while the colon before school indicates that only the group ownership should be changed,
