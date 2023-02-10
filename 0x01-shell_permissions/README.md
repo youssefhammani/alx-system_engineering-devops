@@ -96,3 +96,30 @@ The a in chmod a+x hello stands for "all", meaning that the permissions will be 
 The +x in chmod a+x hello means to add the "execute" permission. In Unix-like operating systems, files have permissions that determine who can read, write, and execute them. The execute permission allows a file to be executed as a program.
 
 So, the chmod a+x hello command adds the execute permission to the file "hello" for all users, meaning that any user who has access to the file will be able to execute it as a program.
+
+
+
+		-----------------------------------------------
+
+
+
+Explain what this command does  "chmod a+x hello"
+
+
+
+The chmod 007 hello command is a command in Unix-like operating systems that is used to change the permissions of a file.
+
+The chmod command is used to change the permissions of files or directories. The syntax of the chmod command is chmod [options] [mode] file.
+
+The mode in chmod 007 hello is an octal (base 8) representation of the permissions to be set for the file. In this case, 007 represents the permissions to be set.
+
+Each octal digit in the mode represents the permissions for the file's owner, group owner, and other users, respectively. The first digit represents the owner's permissions, the second digit represents the group owner's permissions, and the third digit represents the permissions for other users.
+
+Each digit is made up of three binary digits (bits), where each bit represents a specific permission: read (4), write (2), and execute (1). So, for example, if the digit is 7, it means that all three permissions (read, write, and execute) are set.
+
+In the case of chmod 007 hello, the permissions being set are:
+
+Owner: no permission at all (0)
+Group: no permission at all (0)
+Other users: read, write, and execute permissions (7)
+So, this command sets the file "hello" with no permissions for the owner and the group owner, and all the permissions for other users.
