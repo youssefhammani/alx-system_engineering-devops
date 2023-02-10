@@ -372,3 +372,23 @@ The command chown -h vincent:staff _hello changes the ownership of the file _hel
 So, in this case, if the file _hello is a symbolic link, then the ownership of the symbolic link itself will be changed to vincent and staff. If _hello is not a symbolic link, then the ownership of the file itself will be changed to vincent and staff.
 
 It's important to note that only the superuser or the owner of the file can change the ownership of a file, and the use of the chown command requires appropriate permissions.
+
+
+
+		--------------------------------------------------
+
+
+
+Explain what this command does  "chown --from=guillaume betty hello"
+
+
+The chown command is used to change the owner of a file or directory in Unix-like operating systems. The syntax of the chown command is as follows:
+
+																	chown [OPTION]... [OWNER][:[GROUP]] FILE...
+
+
+In your specific case, chown --from=guillaume betty hello changes the owner of the file hello from guillaume to betty.
+
+The --from option is used to specify the current owner of the file, which is guillaume in this case. This option is used to change the owner of a file in a more automated and efficient manner, as it avoids the need to perform an ls command and compare the output to determine the current owner.
+
+Note that the chown command requires administrative privileges, so it is usually run with sudo to execute the command with superuser privileges.
