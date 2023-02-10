@@ -392,3 +392,18 @@ In your specific case, chown --from=guillaume betty hello changes the owner of t
 The --from option is used to specify the current owner of the file, which is guillaume in this case. This option is used to change the owner of a file in a more automated and efficient manner, as it avoids the need to perform an ls command and compare the output to determine the current owner.
 
 Note that the chown command requires administrative privileges, so it is usually run with sudo to execute the command with superuser privileges.
+
+
+
+		-------------------------------------------------------------
+
+
+
+For File: 103-Star_Wars
+
+
+The telnet command is used to connect to a remote network host using the Telnet protocol. The host specified in the command (towel.blinkenlights.nl) is a server that runs a service that displays an ASCII animation of the Star Wars IV opening crawl in the terminal.
+
+When you run the command telnet towel.blinkenlights.nl in your terminal, it opens a Telnet connection to the remote host and displays the ASCII animation in the terminal window. The animation is not stored on your computer, but rather is generated on the fly by the server and displayed in your terminal in real-time.
+
+Note that Telnet is an outdated and unsecured protocol, and its use for remote access is discouraged. If you need to access a remote network host, it is recommended to use a more secure protocol such as SSH (Secure Shell).
