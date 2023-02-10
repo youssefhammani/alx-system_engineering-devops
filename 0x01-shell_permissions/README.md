@@ -76,3 +76,23 @@ The chmod command is used to change the permissions of a file in Unix-like syste
 The u option refers to the owner of the file, g refers to the group owner of the file, and o refers to other users. The +x option adds execute permission, and the +r option adds read permission.
 
 So, the argument ug+x,o+r means that execute permission should be added for both the owner and the group owner, and read permission should be added for other users.
+
+
+
+		----------------------------------------------------------
+
+
+
+Explain what this command does  "chmod a+x hello"
+
+
+
+The chmod a+x hello command is a command in Unix-like operating systems that is used to change the permissions of a file.
+
+The chmod command is used to change the permissions of files or directories. The syntax of the chmod command is chmod [options] [mode] file.
+
+The a in chmod a+x hello stands for "all", meaning that the permissions will be changed for the file's owner, the group owner, and all other users.
+
+The +x in chmod a+x hello means to add the "execute" permission. In Unix-like operating systems, files have permissions that determine who can read, write, and execute them. The execute permission allows a file to be executed as a program.
+
+So, the chmod a+x hello command adds the execute permission to the file "hello" for all users, meaning that any user who has access to the file will be able to execute it as a program.
