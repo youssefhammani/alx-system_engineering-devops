@@ -151,3 +151,21 @@ Owner: read, write, and execute permissions (7)
 Group: read and execute permissions (5)
 Other users: read and execute permissions (3)
 So, this command sets the file with the specified name with read, write, and execute permissions for the owner, read and execute permissions for the group owner, and read and execute permissions for other users.
+
+
+		----------------------------------------------------------------
+
+
+
+
+Explain what this command does  "chmod "$(stat -c "%a" olleh)" hello"
+
+
+
+The command chmod "$(stat -c "%a" olleh)" hello sets the mode (permissions) of the file "hello" to be the same as the mode of the file "olleh".
+
+Here's how the command works:
+
+stat -c "%a" olleh retrieves the octal mode (permissions) of the file "olleh". The %a format specifies that the output should be the file's permissions in octal format.
+The output of stat -c "%a" olleh is passed as an argument to chmod using command substitution, $(...).
+chmod "$(stat -c "%a" olleh)" hello sets the mode of the file "hello" to be the same as the mode of the file "olleh". The mode is specified in octal format as the argument to chmod.
