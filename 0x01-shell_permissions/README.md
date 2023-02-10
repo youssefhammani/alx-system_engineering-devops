@@ -123,3 +123,31 @@ Owner: no permission at all (0)
 Group: no permission at all (0)
 Other users: read, write, and execute permissions (7)
 So, this command sets the file "hello" with no permissions for the owner and the group owner, and all the permissions for other users.
+
+
+
+		------------------------------------------------------------
+
+
+
+
+Explain what this command does  "chmod 753 hello"
+
+
+
+The chmod 753 command is a command in Unix-like operating systems that is used to change the permissions of a file.
+
+The chmod command is used to change the permissions of files or directories. The syntax of the chmod command is chmod [options] [mode] file.
+
+The mode in chmod 753 is an octal (base 8) representation of the permissions to be set for the file. In this case, 753 represents the permissions to be set.
+
+Each octal digit in the mode represents the permissions for the file's owner, group owner, and other users, respectively. The first digit represents the owner's permissions, the second digit represents the group owner's permissions, and the third digit represents the permissions for other users.
+
+Each digit is made up of three binary digits (bits), where each bit represents a specific permission: read (4), write (2), and execute (1). So, for example, if the digit is 7, it means that all three permissions (read, write, and execute) are set.
+
+In the case of chmod 753, the permissions being set are:
+
+Owner: read, write, and execute permissions (7)
+Group: read and execute permissions (5)
+Other users: read and execute permissions (3)
+So, this command sets the file with the specified name with read, write, and execute permissions for the owner, read and execute permissions for the group owner, and read and execute permissions for other users.
