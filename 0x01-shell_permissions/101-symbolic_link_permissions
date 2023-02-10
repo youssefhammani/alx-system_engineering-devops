@@ -1,0 +1,2 @@
+#!/bin/bash
+sudo bash -c "chown vincent hello; chgrp staff hello"
