@@ -196,3 +196,43 @@ chmod is the command to change the mode (permissions) of a file.
 --reference=olleh is an option that tells chmod to set the mode of the file "hello" based on the mode of the file "olleh".
 hello is the file whose mode is being changed.
 So, the command chmod --reference=olleh hello will set the mode of the file "hello" to be the same as the mode of the file "olleh". This means that the owner, group, and other users will have the same level of permissions to read, write, and execute "hello" as they have for "olleh".
+
+
+
+		-------------------------------------------------
+
+
+
+
+Explain what this command does  
+
+
+1 ==> "find . -type d -exec chmod a+x {} +"
+
+
+The command find . -type d -exec chmod a+x {} + is a one-liner that adds execute permission to all subdirectories in the current directory for the owner, the group owner, and all other users.
+
+find is a Unix command used to search for files and directories in a file system. The argument . tells find to start searching in the current directory. The option -type d restricts the search to only directories.
+
+-exec is an option of the find command used to execute a specified command for each file or directory found. The chmod command is used to change the permissions of a file or directory. The a+x option adds execute permission for owner, group owner, and all other users.
+
+{} is a placeholder that represents the file or directory found by find. The + sign at the end tells find to run the chmod command for multiple directories at once, instead of running it for each directory separately.
+
+So, the find . -type d -exec chmod a+x {} + command finds all subdirectories in the current directory and adds execute permission to each of them for the owner, the group owner, and all other users.
+
+
+
+2 ==> "sudo chmod -R +111 */"
+
+
+The command sudo chmod -R +111 */ is a one-liner that adds execute permission to all subdirectories in the current directory for the owner, the group owner, and all other users.
+
+sudo is a command that allows a user to execute a command with the privileges of the superuser or another user. chmod is a command that changes the permissions of files or directories.
+
+The -R option of chmod stands for "recursive" and means that the command will be applied to all subdirectories and files in the current directory and its subdirectories.
+
+The argument +111 is an octal representation of the permissions to add. 1 in binary represents execute permission, and +111 in octal is equivalent to adding execute permission for owner, group owner, and all other users.
+
+The argument */ specifies all subdirectories in the current directory.
+
+So, the sudo chmod -R +111 */ command changes the permissions of all subdirectories in the current directory to add execute permission for the owner, the group owner, and all other users.
