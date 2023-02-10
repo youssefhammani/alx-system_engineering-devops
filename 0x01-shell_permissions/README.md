@@ -103,7 +103,7 @@ So, the chmod a+x hello command adds the execute permission to the file "hello" 
 
 
 
-Explain what this command does  "chmod a+x hello"
+Explain what this command does  "chmod 007 hello"
 
 
 
