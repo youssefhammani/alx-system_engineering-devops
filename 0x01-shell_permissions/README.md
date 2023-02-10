@@ -325,7 +325,6 @@ Explain what this command does
 1 ==> "sudo chown :school hello"
 
 
-
 The sudo chown -R vincent:staff . command changes the owner and group ownership of all files and directories in the current working directory, including subdirectories. The command has the following components:
 
 sudo: This runs the command as the superuser, which is necessary if the user running the command does not have the necessary permissions to change the owner and group owner of the files and directories.
@@ -339,3 +338,19 @@ vincent:staff: This argument specifies the owner (vincent) and group owner (staf
 .: This specifies the current working directory, which is the directory in which the chown command is executed.
 
 So, when the command is executed, it changes the owner and group ownership of all files and directories in the current working directory to vincent and staff, respectively. The change is applied recursively, so it affects all files and subdirectories in the current working directory.
+
+
+
+
+2 ==> "chown vincent:staff *"
+
+
+The chown vincent:staff * command changes the owner and group ownership of all files and directories in the current working directory. The command has the following components:
+
+chown: This is the command used to change the owner and group ownership of a file or directory.
+
+vincent:staff: This argument specifies the owner (vincent) and group owner (staff) to be set for all files and directories in the current working directory. The colon between vincent and staff separates the owner from the group owner.
+
+*: This is a wildcard character that matches all files and directories in the current working directory.
+
+So, when the command is executed, it changes the owner and group ownership of all files and directories in the current working directory to vincent and staff, respectively. The change is applied to all files and directories in the current working directory, but not to subdirectories within those files and directories.
