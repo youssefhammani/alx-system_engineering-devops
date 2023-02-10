@@ -158,9 +158,10 @@ So, this command sets the file with the specified name with read, write, and exe
 
 
 
-Explain what this command does  "chmod "$(stat -c "%a" olleh)" hello"
+Explain what this command does  
 
 
+1 ==>	"chmod "$(stat -c "%a" olleh)" hello"
 
 The command chmod "$(stat -c "%a" olleh)" hello sets the mode (permissions) of the file "hello" to be the same as the mode of the file "olleh".
 
@@ -169,3 +170,29 @@ Here's how the command works:
 stat -c "%a" olleh retrieves the octal mode (permissions) of the file "olleh". The %a format specifies that the output should be the file's permissions in octal format.
 The output of stat -c "%a" olleh is passed as an argument to chmod using command substitution, $(...).
 chmod "$(stat -c "%a" olleh)" hello sets the mode of the file "hello" to be the same as the mode of the file "olleh". The mode is specified in octal format as the argument to chmod.
+
+
+
+2 ==>	"cp --preserve=mode olleh hello"
+
+The command cp --preserve=mode olleh hello copies the file "olleh" to a new file named "hello" and preserves the original mode (permissions) of the file "olleh" in the newly created file "hello".
+
+Here's how the command works:
+
+cp is the command to copy a file.
+--preserve=mode is an option that tells cp to preserve the original mode (permissions) of the file being copied.
+olleh is the source file that is being copied.
+hello is the destination file that is being created. The contents of the source file "olleh" will be copied to this file.
+So, the command cp --preserve=mode olleh hello will create a new file named "hello" in the current directory and copy the contents of the file "olleh" to this new file. The mode (permissions) of the newly created file "hello" will be set to be the same as the mode of the original file "olleh".
+
+
+3 ==> "chmod --reference=olleh hello"
+
+The command chmod --reference=olleh hello sets the mode (permissions) of the file "hello" to be the same as the mode of the file "olleh".
+
+Here's how the command works:
+
+chmod is the command to change the mode (permissions) of a file.
+--reference=olleh is an option that tells chmod to set the mode of the file "hello" based on the mode of the file "olleh".
+hello is the file whose mode is being changed.
+So, the command chmod --reference=olleh hello will set the mode of the file "hello" to be the same as the mode of the file "olleh". This means that the owner, group, and other users will have the same level of permissions to read, write, and execute "hello" as they have for "olleh".
