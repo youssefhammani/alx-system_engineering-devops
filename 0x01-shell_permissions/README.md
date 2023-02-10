@@ -311,3 +311,31 @@ The sudo chown command is used to change the owner and group ownership of a file
 
 
 n this case, sudo chown :school hello changes the group ownership of the file hello to school, while leaving the owner unchanged. The :school argument specifies the group ownership to be set for the file hello, while the colon before school indicates that only the group ownership should be changed,
+
+
+		----------------------------------------------
+
+
+
+
+Explain what this command does  
+
+
+
+1 ==> "sudo chown :school hello"
+
+
+
+The sudo chown -R vincent:staff . command changes the owner and group ownership of all files and directories in the current working directory, including subdirectories. The command has the following components:
+
+sudo: This runs the command as the superuser, which is necessary if the user running the command does not have the necessary permissions to change the owner and group owner of the files and directories.
+
+chown: This is the command used to change the owner and group ownership of a file or directory.
+
+-R: This option tells the chown command to change the owner and group ownership recursively, so that it applies to all files and directories in the current working directory, including subdirectories.
+
+vincent:staff: This argument specifies the owner (vincent) and group owner (staff) to be set for all files and directories in the current working directory. The colon between vincent and staff separates the owner from the group owner.
+
+.: This specifies the current working directory, which is the directory in which the chown command is executed.
+
+So, when the command is executed, it changes the owner and group ownership of all files and directories in the current working directory to vincent and staff, respectively. The change is applied recursively, so it affects all files and subdirectories in the current working directory.
