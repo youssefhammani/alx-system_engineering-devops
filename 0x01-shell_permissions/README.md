@@ -236,3 +236,41 @@ The argument +111 is an octal representation of the permissions to add. 1 in bin
 The argument */ specifies all subdirectories in the current directory.
 
 So, the sudo chmod -R +111 */ command changes the permissions of all subdirectories in the current directory to add execute permission for the owner, the group owner, and all other users.
+
+
+
+		-------------------------------------------------------
+
+
+
+
+Explain what this command does  
+
+
+
+1 ==> "install -d -m 751 my_dir"
+
+
+The install command is a utility used to copy files and set their permissions. In this case, the -d option tells install to create a directory instead of copying a file, and the -m option sets the permissions for the newly created directory. The argument 751 sets the permissions for the directory to 751, which is an octal representation of the permissions.
+
+Here's a breakdown of the permissions:
+
+7: read, write, and execute permissions for the owner of the directory (user)
+5: read and execute permissions for the group of the directory
+1: execute permission for others (everyone else).
+So, in this command install -d -m 751 my_dir, the install command creates a directory called my_dir with permissions 751 in the current working directory.
+
+
+
+
+2 ==> "mkdir -m 751 my_dir"
+
+
+nd is used to create a new directory. The -m option allows you to specify the permissions for the newly created directory. The argument 751 sets the permissions for the directory to 751, which is an octal representation of the permissions.
+
+Here's a breakdown of the permissions:
+
+7: read, write, and execute permissions for the owner of the directory (user)
+5: read and execute permissions for the group of the directory
+1: execute permission for others (everyone else).
+So, in this command mkdir -m 751 my_dir, the mkdir command creates a directory called my_dir with permissions 751 in the current working directory.
