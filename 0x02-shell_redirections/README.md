@@ -33,11 +33,11 @@ The single quote character at the end of the string is used to close the string 
 
 ### 2-hellofile
 
-``` Bash
+```bash
 	cat /etc/passwd
 ```
 
-> The command cat /etc/passwd is used to display the contents of the /etc/passwd file on a Unix-like operating system.
+** The command cat /etc/passwd is used to display the contents of the /etc/passwd file on a Unix-like operating system. **
 
 > The /etc/passwd file is a system file that contains user account information such as usernames, user IDs, home directories, and login shells. The file is used by the system to authenticate users and manage their permissions and access rights.
 
