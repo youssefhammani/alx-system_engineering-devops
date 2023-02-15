@@ -184,3 +184,30 @@ __________________________________________
 *So, when you run tail -n 1 iacta | cat >> iacta, the last line of the file iacta is selected and appended to the end of the same file. In effect, this duplicates the last line of the file.*
 
 *It's worth noting that this command can cause problems if iacta is a small file, because it may read and write to the file at the same time, which can result in unexpected behavior. However, if iacta is a large file, the command should work as expected.*
+
+______________________________________
+
+
+### 10. No more javascript
+
+```bash
+	find . -type f -name "*.js" -delete
+```
+
+*This command uses the find utility to locate all regular files (i.e., not directories) with a .js extension in the current directory and all its subfolders, and then deletes them.*
+
+**Here's a breakdown of the command:**
+
+* **`find`:** *This is the command that searches for files and directories in a directory hierarchy.*
+
+* **`.`:** *This specifies the directory to start the search from. In this case, we're searching in the current directory and all its subfolders.*
+
+* **`type`:** *This tells find to only match regular files, not directories or other types of files.*
+
+* **`-name "*.js"`:** *This tells find to only match files with a .js extension. The * is a wildcard that matches any characters, so this pattern will match any filename that ends with .js.*
+
+* **`delete`:** *This tells find to delete any files that match the criteria specified by the preceding options. The files will be deleted without prompting for confirmation.*
+
+*So when you run find . -type f -name "*.js" -delete, the find command locates all regular files with a .js extension in the current directory and its subfolders, and then deletes them without prompting for confirmation.*
+
+*It's worth noting that this command will permanently delete any files that match the specified criteria, so make sure you really want to delete these files before running this command.*
