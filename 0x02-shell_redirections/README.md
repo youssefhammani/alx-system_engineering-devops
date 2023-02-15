@@ -76,3 +76,19 @@ ________________________________
 *By default, tail displays the last 10 lines of a file. However, you can change the number of lines displayed by using the -n option followed by a number. For example, tail -n 20 /etc/passwd will display the last 20 lines of the file.*
 
 *It's worth noting that tail is not the only command that can be used to display the contents of a file. Another common command for this purpose is cat. However, while cat displays the entire contents of the file, tail displays only the last few lines, making it useful for monitoring log files or other files that are updated frequently.*
+
+_________________________________
+
+### 5-firstlines
+
+```bash
+	head /etc/passwd
+```
+
+*The head command is a command-line utility used in Unix-like operating systems to display the first few lines of a file. The command head /etc/passwd is used to display the first few lines of the /etc/passwd file.*
+
+*As explained in my previous responses, the /etc/passwd file is a system file that contains user account information. The head /etc/passwd command will print the first few lines of the file to the terminal, which will typically be the user accounts at the beginning of the file.*
+
+*By default, head displays the first 10 lines of a file. However, you can change the number of lines displayed by using the -n option followed by a number. For example, head -n 20 /etc/passwd will display the first 20 lines of the file.*
+
+*It's worth noting that head is not the only command that can be used to display the contents of a file. Another common command for this purpose is cat. However, while cat displays the entire contents of the file, head and tail display only the first or last few lines, making them useful for quickly inspecting large files or monitoring log files.*
