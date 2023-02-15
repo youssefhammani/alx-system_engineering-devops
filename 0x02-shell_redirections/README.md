@@ -14,11 +14,7 @@
 
 *In this case, the argument is the string "Hello, world", which is enclosed in double quotes to indicate that it is a single string. The double quotes are not printed to the terminal, only the content of the string is printed.*
 
-
-
 __________________________
-
-
 
 
 ### 1-confused_smiley
@@ -34,16 +30,12 @@ The backslash character before the left parenthesis (() and the right parenthesi
 The left parenthesis and the letter O, separated by the accent circumflex symbol (^), create a face with a raised eyebrow and a snout (Ôo).
 The single quote character at the end of the string is used to close the string and also to escape the double quote character that appears earlier in the string.*
 
-
-
-______________________________________________________________________________________
-
-
+___________________________
 
 
 ### 2-hellofile
 
-```bash
+``` bash
 	cat /etc/passwd
 ```
 
@@ -55,7 +47,7 @@ ________________________________________________________________________________
 
 *The output of the cat /etc/passwd command is a list of user account information in the following format:*
 
-```text
+``` text
 	username:password:UID:GID:GECOS:home_directory:login_shell
 ```
 *Each line in the file represents a single user account, and the fields are separated by colons (:). The meaning of each field is as follows:*
