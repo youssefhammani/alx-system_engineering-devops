@@ -121,3 +121,32 @@ ____________________________________________
 
 * *tail is a command that prints the last few lines of a file.*
 * *-n 1 specifies that we want the last line of the input we receive from the previous command.*
+
+_____________________________________________
+
+### 7-file
+
+```bash
+	echo "Best School" > '\*\\'\''"Best School"\'\''\\*$\?\*\*\*\*\*:)'
+```
+
+**This command has two parts:**
+
+1. *echo "Best School" prints the string "Best School" to the standard output.*
+2. *> '\*\\'\''"Best School"'\''\\*$\?\*\*\*\*\*:)' redirects the standard output to a file named exactly '*\'"Best School"'\*$?*****:)' in the current directory.*
+
+*The file name is specified as a string in single quotes, with some characters escaped using backslashes and others using single quotes to avoid interpretation by the shell. Specifically, the single quotes are used to group the entire file name together as a string, while the backslashes are used to escape the following special characters:*
+
+* *The first asterisk (*) is escaped with a backslash to prevent it from being interpreted as a wildcard character by the shell.*
+
+* *The backslashes are themselves escaped with backslashes, to prevent them from being interpreted as escape characters by the shell.*
+
+* *The single quotes around "Best School" are escaped with a backslash to include them in the file name*
+
+* *The second asterisk is not escaped because it's not a special character in this context (it's just part of the file name).*
+
+* *The question mark is escaped with a backslash to prevent it from being interpreted as a wildcard character by the shell.*
+
+* *The remaining asterisks are not escaped because they're part of a string of asterisks that will be interpreted as part of the file name.*
+
+**Overall, this command creates a file with the name '*\'"Best School"'\*$?*****:)' in the current directory, and puts the string "Best School" (followed by a newline character) into the file.**
