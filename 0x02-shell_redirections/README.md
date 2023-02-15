@@ -22,7 +22,7 @@
 	echo \"\(Ôo\)\'
 ```
 
-** The echo command is used to display the text to the terminal. **
+> The echo command is used to display the text to the terminal. **
 The backslash character (\) before the double quotes (") and the single quote (') tells the shell to treat them as literal characters rather than special characters that are used for shell interpretation.
 The double quotes are used to enclose the entire string that we want to print to the terminal.
 The backslash character before the left parenthesis (() and the right parenthesis ()) tells the shell to treat them as literal characters rather than special characters that are used for grouping expressions or function calls.
@@ -33,20 +33,23 @@ The single quote character at the end of the string is used to close the string 
 
 ### 2-hellofile
 
-> cat /etc/passwd
-
-** The command cat /etc/passwd is used to display the contents of the /etc/passwd file on a Unix-like operating system.
-
-The /etc/passwd file is a system file that contains user account information such as usernames, user IDs, home directories, and login shells. The file is used by the system to authenticate users and manage their permissions and access rights.
-
-When you enter the cat /etc/passwd command in a terminal and hit enter, the cat command is executed, which is a command-line utility that is used to display the contents of files on the terminal. In this case, it reads the /etc/passwd file and prints its contents to the terminal.
-
-The output of the cat /etc/passwd command is a list of user account information in the following format:```
-username:password:UID:GID:GECOS:home_directory:login_shell
+``` Bash
+	cat /etc/passwd
 ```
-** Each line in the file represents a single user account, and the fields are separated by colons (:). The meaning of each field is as follows:
 
-username: The name of the user.
+> The command cat /etc/passwd is used to display the contents of the /etc/passwd file on a Unix-like operating system.
+
+> The /etc/passwd file is a system file that contains user account information such as usernames, user IDs, home directories, and login shells. The file is used by the system to authenticate users and manage their permissions and access rights.
+
+> When you enter the cat /etc/passwd command in a terminal and hit enter, the cat command is executed, which is a command-line utility that is used to display the contents of files on the terminal. In this case, it reads the /etc/passwd file and prints its contents to the terminal.
+
+> The output of the cat /etc/passwd command is a list of user account information in the following format:
+```bash
+	username:password:UID:GID:GECOS:home_directory:login_shell
+```
+> Each line in the file represents a single user account, and the fields are separated by colons (:). The meaning of each field is as follows:
+
+> username: The name of the user.
 password: The password for the user account (in encrypted form).
 UID: The user ID of the user (a unique number assigned to the user by the system).
 GID: The group ID of the user (a unique number assigned to the user's primary group).
