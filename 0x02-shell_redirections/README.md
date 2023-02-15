@@ -92,3 +92,32 @@ _________________________________
 *By default, head displays the first 10 lines of a file. However, you can change the number of lines displayed by using the -n option followed by a number. For example, head -n 20 /etc/passwd will display the first 20 lines of the file.*
 
 *It's worth noting that head is not the only command that can be used to display the contents of a file. Another common command for this purpose is cat. However, while cat displays the entire contents of the file, head and tail display only the first or last few lines, making them useful for quickly inspecting large files or monitoring log files.*
+
+____________________________________________
+
+### 6-third_line
+
+```bash
+	head -n 3 iacta | tail -n 1
+```
+
+*head -n 3 iacta takes the first 3 lines of the file "iacta" and prints them to the standard output.*
+
+*The | character is a pipe, which takes the output of the command on the left and uses it as the input of the command on the right.*
+
+*tail -n 1 takes the last line of the input received from the previous command (which, in this case, is the third line of the "iacta" file) and prints it to the standard output.*
+
+*So, the entire command head -n 3 iacta | tail -n 1 will print the third line of the "iacta" file.*
+
+**Here's a breakdown of the two commands:**
+
+**head -n 3 iacta:**
+
+* *head is a command that prints the first few lines of a file.*
+* *-n 3 specifies that we want the first 3 lines of the file.*
+* *iacta is the name of the file we want to print the first 3 lines of.*
+
+**tail -n 1:**
+
+* *tail is a command that prints the last few lines of a file.*
+* *-n 1 specifies that we want the last line of the input we receive from the previous command.*
