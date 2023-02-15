@@ -60,3 +60,19 @@ GECOS: General Electric Comprehensive Operating System (GECOS) field, which cont
 home_directory: The home directory of the user.
 login_shell: The user's login shell (the program that runs when the user logs in).
 Note that on modern systems, password hashes are usually stored in a separate file (such as /etc/shadow) for security reasons, and the password field in /etc/passwd is often replaced with an "x" character.*
+
+________________________________
+
+### 4-lastlines
+
+``` bash
+	tail /etc/passwd
+```
+
+*The tail command is a command-line utility used in Unix-like operating systems to display the last few lines of a file. The command tail /etc/passwd is used to display the last few lines of the /etc/passwd file.*
+
+*As explained in my previous response, the /etc/passwd file is a system file that contains user account information. The tail /etc/passwd command will print the last few lines of the file to the terminal, which will typically be the most recently added user accounts.*
+
+*By default, tail displays the last 10 lines of a file. However, you can change the number of lines displayed by using the -n option followed by a number. For example, tail -n 20 /etc/passwd will display the last 20 lines of the file.*
+
+*It's worth noting that tail is not the only command that can be used to display the contents of a file. Another common command for this purpose is cat. However, while cat displays the entire contents of the file, tail displays only the last few lines, making it useful for monitoring log files or other files that are updated frequently.*
