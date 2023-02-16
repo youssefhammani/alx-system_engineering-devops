@@ -204,9 +204,9 @@ ______________________________________
 
 * **`type`:** *This tells find to only match regular files, not directories or other types of files.*
 
-* **`-name "*.js"`:** *This tells find to only match files with a .js extension. The * is a wildcard that matches any characters, so this pattern will match any filename that ends with .js.*
+* **`-name "*.js" :`** *This tells find to only match files with a .js extension. The * is a wildcard that matches any characters, so this pattern will match any filename that ends with .js.*
 
-* **`delete`:** *This tells find to delete any files that match the criteria specified by the preceding options. The files will be deleted without prompting for confirmation.*
+* **`delete` :** *This tells find to delete any files that match the criteria specified by the preceding options. The files will be deleted without prompting for confirmation.*
 
 *So when you run find . -type f -name "*.js" -delete, the find command locates all regular files with a .js extension in the current directory and its subfolders, and then deletes them without prompting for confirmation.*
 
