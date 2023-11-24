@@ -3,11 +3,8 @@
 pid=$(pgrep -fo "4-to_infinity_and_beyond")
 if [ -n "$pid" ]; then
     echo "Stopping 4-to_infinity_and_beyond..."
-    
     kill -2 "$pid"
-    
     wait "$pid" 2>/dev/null
-    
     echo "Terminated"
 else
     echo "4-to_infinity_and_beyond is not running."
