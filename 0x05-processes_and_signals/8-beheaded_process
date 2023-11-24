@@ -2,6 +2,7 @@
 # Find the process ID (PID) of 7-highlander
 pid=$(pgrep -fo "7-highlander")
 if [ -n "$pid" ]; then
+
     echo "Beheading 7-highlander..."
     
     kill -9 "$pid"
