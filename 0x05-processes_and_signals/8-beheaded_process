@@ -1,13 +1,3 @@
 #!/usr/bin/env bash
 # Find the process ID (PID) of 7-highlander
-pid=$(pgrep -fo "7-highlander")
-if [ -n "$pid" ]; then
-
-    echo "Beheading 7-highlander..."
-    
-    kill -9 "$pid"
-    
-    echo "Killed"
-else
-    echo "7-highlander is not running."
-fi
+pkill -SIGKILL -f "7-highlander"
