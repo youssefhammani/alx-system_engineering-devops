@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Find the process ID (PID) of 7-highlander
 pid=$(pgrep -fo "7-highlander")
+
 if [ -n "$pid" ]; then
     echo "Stopping 7-highlander..."
     kill -15 "$pid"
