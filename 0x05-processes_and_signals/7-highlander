@@ -1,11 +1,9 @@
 #!/usr/bin/env bash
 # Find the process ID (PID) of 7-highlander
-pid=$(pgrep -fo "7-highlander")
+trap 'echo "I am invincible!!!" ' TERM
 
-if [ -n "$pid" ]; then
-    echo "Stopping 7-highlander..."
-    kill -15 "$pid"
-    echo "Terminated"
-else
-    echo "7-highlander is not running."
-fi
+while :
+do
+    echo "To infinity and beyond"
+    sleep 2
+done
