@@ -12,7 +12,7 @@ case "$1" in
         ;;
     stop)
         if [ -e "$PID_FILE" ]; then
-            kill $(cat "$PID_FILE")
+            kill -s SIGSTOP $(cat "$PID_FILE")
             rm "$PID_FILE"
 	    echo "manage_my_process stopped"
         fi
