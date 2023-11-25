@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # Create the file /var/run/myscript.pid containing its PID
+
 echo $$ > /var/run/myscript.pid
 
 # Trap signals and define corresponding actions
