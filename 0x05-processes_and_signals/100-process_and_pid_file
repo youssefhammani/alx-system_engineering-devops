@@ -1,16 +1,25 @@
 #!/usr/bin/env bash
-# Create the file /var/run/myscript.pid containing its PID
 
-echo $$ > /var/run/myscript.pid
+# File to store the PID
+PID_FILE="/var/run/myscript.pid"
 
-# Trap signals and define corresponding actions
-trap "echo 'I hate the kill command'"; "rm -f /var/run/myscript.pid && exit 0" SIGTERM
-trap "echo 'Y U no love me?!'" SIGINT
-trap "rm -f /var/run/myscript.pid && exit 0" SIGQUIT
+# Function to clean up and exit
+cleanup_and_exit() {
+    echo "Cleaning up and exiting."
+    rm -f "$PID_FILE"
+    exit 0
+}
 
-# Display To infinity and beyond indefinitely
+# Trap signals
+trap 'echo "I hate the kill command"; cleanup_and_exit;' SIGTERM
+trap 'echo "Y U no love me?!";' SIGINT
+trap 'cleanup_and_exit;' SIGQUIT
+
+# Create PID file
+echo $$ > "$PID_FILE"
+
+# Main loop
 while true; do
     echo "To infinity and beyond"
     sleep 2
 done
-
