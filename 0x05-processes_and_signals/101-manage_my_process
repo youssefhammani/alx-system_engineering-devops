@@ -17,7 +17,7 @@ start_process() {
 stop_process() {
     if [ -e "$PID_FILE" ]; then
         PID=$(cat "$PID_FILE")
-        kill "$PID"
+        kill -s SIGSTOP "$PID"
         rm "$PID_FILE"
         echo "manage_my_process stopped"
     else
