@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 # File to store the PID
 PID_FILE="/var/run/myscript.pid"
 
