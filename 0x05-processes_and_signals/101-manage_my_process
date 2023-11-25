@@ -16,8 +16,7 @@ start_process() {
 
 stop_process() {
     if [ -e "$PID_FILE" ]; then
-        PID=$(cat "$PID_FILE")
-        kill "$PID"
+	kill "$(cat "$PID_FILE")"
         rm -f "$PID_FILE"
         echo "manage_my_process stopped"
     else
@@ -26,7 +25,6 @@ stop_process() {
 }
 
 restart_process() {
-    kill "$(cat "$PID_FILE")"
     rm -f "$PID_FILE"
     "$MANAGE_SCRIPT" &
     echo "$!" > "$PID_FILE"
