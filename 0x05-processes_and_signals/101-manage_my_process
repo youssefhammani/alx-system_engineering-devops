@@ -18,7 +18,7 @@ stop_process() {
     if [ -e "$PID_FILE" ]; then
         PID=$(cat "$PID_FILE")
         kill "$PID"
-        rm "$PID_FILE"
+        rm -f "$PID_FILE"
         echo "manage_my_process stopped"
     else
         echo "Error: manage_my_process is not running."
@@ -26,8 +26,10 @@ stop_process() {
 }
 
 restart_process() {
-    stop_process
-    start_process
+    kill "$(cat "$PID_FILE")"
+    rm -f "$PID_FILE"
+    "$MANAGE_SCRIPT" &
+    echo "$!" > "$PID_FILE"
     echo "manage_my_process restarted"
 }
 
