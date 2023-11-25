@@ -33,16 +33,11 @@ restart_process() {
 
 case "$1" in
     start)
-        start_process
-        ;;
+        start_process;;
     stop)
-        stop_process
-        ;;
+        stop_process;;
     restart)
-        restart_process
-        ;;
+        restart_process;;
     *)
-        echo "Usage: manage_my_process {start|stop|restart}"
-        exit 1
-        ;;
+        echo "Usage: manage_my_process {start|stop|restart}";;
 esac
