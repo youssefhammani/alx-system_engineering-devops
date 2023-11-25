@@ -11,12 +11,10 @@ case "$1" in
 		echo "manage_my_process started"
 		;;
 	stop)
-		if [ -e "$PID_FILE" ]; then
-			PID=$(cat "$PID_FILE")
-			kill "$PID"
-			rm "$PID_FILE"
-			echo "manage_my_process stopped"
-		fi
+		PID=$(cat "$PID_FILE")
+		kill "$PID"
+		rm "$PID_FILE"
+		echo "manage_my_process stopped"
 		;;
 	restart)
 		PID=$(cat "$PID_FILE")
