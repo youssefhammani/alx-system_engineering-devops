@@ -6,7 +6,7 @@ PID_FILE="/var/run/my_process.pid"
 
 start_process() {
     if [ -e "$PID_FILE" ]; then
-        echo "Error: manage_my_process is already running (PID $(cat "$PID_FILE"))."
+        echo "Error: manage_my_process is already running (PID "$(cat "$PID_FILE")")."
     else
         "$MANAGE_SCRIPT" &
         echo "$!" > "$PID_FILE"
