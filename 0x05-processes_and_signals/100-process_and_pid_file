@@ -1,10 +1,14 @@
 #!/usr/bin/env bash
-# traps signals and creates a file containing its pid
+# Create the file /var/run/myscript.pid containing its PID
 echo $$ > /var/run/myscript.pid
-trap 'echo "I hate the kill command"' SIGTERM
-trap 'echo "Y U no love me?!"' SIGINT
-trap 'rm -f /var/run/myscript.pid && exit' SIGQUIT SIGTERM
+
+# Trap signals and define corresponding actions
+trap "echo 'I hate the kill command'" SIGTERM
+trap "echo 'Y U no love me?!'" SIGINT
+trap "rm -f /var/run/myscript.pid && exit" SIGQUIT SIGTERM
+
+# Display To infinity and beyond indefinitely
 while true; do
-    echo 'To infinity and beyond'
+    echo "To infinity and beyond"
     sleep 2
-done
+done;
