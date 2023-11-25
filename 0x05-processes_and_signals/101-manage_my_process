@@ -1,48 +1,31 @@
 #!/usr/bin/env bash
 # manager for manage_my_process
 
-MANAGE_SCRIPT="./manage_my_process"
+RUN_SCRIPT="./manage_my_process"
 PID_FILE="/var/run/my_process.pid"
-
-start_process() {
-    if [ -e "$PID_FILE" ]; then
-        echo "Error: manage_my_process is already running (PID $(cat "$PID_FILE"))."
-    else
-        $MANAGE_SCRIPT &
-        echo $! > "$PID_FILE"
-        echo "manage_my_process started"
-    fi
-}
-
-stop_process() {
-    if [ -e "$PID_FILE" ]; then
-        PID=$(cat "$PID_FILE")
-        kill -s SIGSTOP "$PID"
-        rm "$PID_FILE"
-        echo "manage_my_process stopped"
-    else
-        echo "Error: manage_my_process is not running."
-    fi
-}
-
-restart_process() {
-    stop_process
-    start_process
-    echo "manage_my_process restarted"
-}
 
 case "$1" in
     start)
-        start_process
+        $RUN_SCRIPT &
+        echo $! > "$PID_FILE"
+	echo "manage_my_process started"
         ;;
     stop)
-        stop_process
+        if [ -e "$PID_FILE" ]; then
+            kill $(cat "$PID_FILE")
+            rm "$PID_FILE"
+	    echo "manage_my_process stopped"
+        fi
         ;;
     restart)
-        restart_process
+	PID=$(cat "$PID_FILE")
+	kill -s SIGSTOP "$PID"
+	rm "$PID_FILE"
+	$RUN_SCRIPT & > $PID_FILE
+	echo "manage_my_process restarted"
         ;;
     *)
-        echo "Usage: $0 {start|stop|restart}"
+        echo "Usage: manage_my_process {start|stop|restart}"
         exit 1
         ;;
 esac
