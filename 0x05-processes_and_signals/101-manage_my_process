@@ -6,22 +6,18 @@ case "$1" in
 	start)
 		$RUN_SCRIPT &
 		echo $! > "$PID_FILE"
-		echo "manage_my_process started"
-		;;
+		echo "manage_my_process started";;
 	stop)
 		PID=$(cat "$PID_FILE")
 		kill "$PID"
 		rm "$PID_FILE"
-		echo "manage_my_process stopped"
-		;;
+		echo "manage_my_process stopped";;
 	restart)
 		PID=$(cat "$PID_FILE")
 		kill -s SIGSTOP "$PID"
 		rm "$PID_FILE"
 		$RUN_SCRIPT & > $PID_FILE
-		echo "manage_my_process restarted"
-		;;
+		echo "manage_my_process restarted";;
 	*)
-		echo "Usage: manage_my_process {start|stop|restart}"
-		;;
+		echo "Usage: manage_my_process {start|stop|restart}";;
 esac
