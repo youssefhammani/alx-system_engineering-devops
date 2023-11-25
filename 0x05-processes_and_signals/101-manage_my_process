@@ -3,7 +3,6 @@
 
 RUN_SCRIPT="./manage_my_process"
 PID_FILE="/var/run/my_process.pid"
-
 case "$1" in
 	start)
 		$RUN_SCRIPT &
