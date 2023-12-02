@@ -5,6 +5,7 @@ if [ $# -eq 0 ]; then
     script_name=$(basename "$0")
     echo "Usage: $script_name {IP_ADDRESS}"
     exit 1
+else
+	ip_address=$1
+	ping -c 5 $ip_address
 fi
-ip_address=$1
-ping -c 5 $ip_address
