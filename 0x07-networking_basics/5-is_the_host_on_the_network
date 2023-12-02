@@ -6,6 +6,6 @@ if [ $# -eq 0 ]; then
     echo "Usage: $script_name {IP_ADDRESS}"
     exit 1
 else
-	ip_address=$1
-	ping -c 5 $ip_address
+	ip_address="$1"
+	ping -c 5 "$ip_address"
 fi
