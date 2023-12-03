@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# This script configures an Ubuntu server to meet specific hostname resolution requirements.
+# This script configures an Ubuntu server to meet
+# specific hostname resolution requirements.
 
 sudo cp /etc/hosts /etc/hosts.bak
 sudo sed -i s/^127.*localhost$/127.0.0.2\ localhost/ ~/hosts.bak
