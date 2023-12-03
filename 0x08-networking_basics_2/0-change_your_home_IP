@@ -2,7 +2,7 @@
 # This script configures an Ubuntu server to meet
 # specific hostname resolution requirements.
 
-sudo cp /etc/hosts /etc/hosts.bak
+sudo cp /etc/hosts ~/hosts.bak
 sudo sed -i s/^127.*localhost$/127.0.0.2\ localhost/ ~/hosts.bak
 echo "8.8.8.8 facebook.com" >> ~/hosts.bak
 cat ~/hosts.bak > /etc/hosts
