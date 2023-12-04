@@ -2,6 +2,6 @@
 # Get all active IPv4 IPs using ifconfig and grep
 ips=$(ifconfig | grep -oP 'inet \K[\d.]+')
 # Display each IP address
-for ip in $ips; do
-  echo $ip
+for ip in "$ips"; do
+  echo "$ip"
 done
