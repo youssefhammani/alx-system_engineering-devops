@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# This script configures the SSH client to use the private key and refuse password authentication
+
+# Define the path to the private key
+PRIVATE_KEY_PATH="$HOME/.ssh/school"
+
+# Check if the private key file exists
+if [ ! -f "$PRIVATE_KEY_PATH" ]; then
+    echo "Private key file does not exist: $PRIVATE_KEY_PATH"
+    exit 1
+fi
+
+# Create the SSH client configuration
+cat << EOF > "$HOME/.ssh/config"
+Host *
+    IdentityFile $PRIVATE_KEY_PATH
+    PasswordAuthentication no
+EOF
+
+# Display success message
+echo "SSH client configuration created successfully."
