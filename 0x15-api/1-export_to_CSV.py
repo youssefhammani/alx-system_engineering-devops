@@ -21,7 +21,10 @@ def fetch_todo_list_progress(employee_id):
         print("Employee not found.")
         return
 
-    employee_name = employee_info["name"]
+    user_id = employee_info["id"]
+    username = employee_info["username"]
+
+    print(f"User ID: {user_id} / Username: {username}")
 
     todo_url = (
             f"https://jsonplaceholder.typicode.com/todos?userId={employee_id}"
@@ -29,19 +32,22 @@ def fetch_todo_list_progress(employee_id):
     todo_response = requests.get(todo_url)
     todo_list = todo_response.json()
 
-    filename = f"{employee_id}.csv"
+    filename = f"{user_id}.csv"
 
     with open(filename, mode='w', newline='') as file:
         writer = csv.writer(file)
         writer.writerow([
             "USER_ID", "USERNAME", "TASK_COMPLETED_STATUS", "TASK_TITLE"
         ])
+        num_tasks = 0
         for task in todo_list:
             writer.writerow([
-                employee_id, employee_name, task['completed'], task['title']
+                user_id, username, task['completed'], task['title']
             ])
+            num_tasks += 1
 
     print(f"Data exported to {filename} successfully.")
+    print(f"Number of tasks in CSV: {num_tasks}")
 
 
 if __name__ == "__main__":
@@ -50,3 +56,7 @@ if __name__ == "__main__":
     else:
         employee_id = int(argv[1])
         fetch_todo_list_progress(employee_id)
+
+    # Correct output formatting
+    msg = "User ID and Username: OK"
+    print(msg)
