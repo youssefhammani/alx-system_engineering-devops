@@ -21,7 +21,7 @@ def fetch_todo_list_progress(employee_id):
         print("Employee not found.")
         return
 
-    user_id = employee_info.get("id")
+    user_id = employee_info["id"]
     username = employee_info.get("username")
 
     print(f"User ID: {user_id} / Username: {username}")
