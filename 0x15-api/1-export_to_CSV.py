@@ -34,7 +34,7 @@ def fetch_todo_list_progress(employee_id):
     with open(filename, mode='w', newline='') as file:
         writer = csv.writer(file, quoting=csv.QUOTE_ALL)
         [writer.writerow([user_id, username, elm.get("completed"),
-                          elm.get("title")]) for elm in to_do]
+                          elm.get("title")]) for elm in todo_list]
 
 
 if __name__ == "__main__":
