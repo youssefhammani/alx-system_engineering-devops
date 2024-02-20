@@ -36,4 +36,3 @@ frontend www-https
 
 backend www-backend
     server web-server 127.0.0.1:80
-
