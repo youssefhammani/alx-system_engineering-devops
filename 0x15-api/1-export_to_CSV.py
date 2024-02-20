@@ -41,7 +41,7 @@ if __name__ == "__main__":
     if len(argv) != 2:
         print("Usage: ./1-export_to_CSV.py <employee_id>")
     else:
-        employee_id = int(argv[1])
+        employee_id = argv[1]
         fetch_todo_list_progress(employee_id)
 
     # Correct output formatting
