@@ -35,7 +35,7 @@ def fetch_todo_list_progress(employee_id):
     filename = f"{user_id}.csv"
 
     with open(filename, mode='w', newline='') as file:
-        writer = csv.writer(file, quoting=csv.QUOTE_ALL)
+        writer = csv.writer(file, quoting=CSV.QUOTE_ALL)
         writer.writerow([
             "USER_ID", "USERNAME", "TASK_COMPLETED_STATUS", "TASK_TITLE"
         ])
