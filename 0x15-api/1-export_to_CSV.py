@@ -29,7 +29,7 @@ def fetch_todo_list_progress(employee_id):
     todo_response = requests.get(url + "todos", params={"userId": employee_id})
     todo_list = todo_response.json()
 
-    filename = f"{user_id}.csv"
+    filename = "{}.csv".format(user_id)
 
     with open(filename, mode='w', newline='') as file:
         writer = csv.writer(file, quoting=csv.QUOTE_ALL)
