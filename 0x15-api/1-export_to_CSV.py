@@ -13,8 +13,8 @@ def fetch_todo_list_progress(employee_id):
     """
     Fetches TODO list progress for the given employee ID.
     """
-    url = f"https://jsonplaceholder.typicode.com/users/{employee_id}"
-    response = requests.get(url)
+    url = "https://jsonplaceholder.typicode.com/"
+    response = requests.get(url + "users/{}".format(employee_id))
     employee_info = response.json()
 
     if "id" not in employee_info:
@@ -26,10 +26,7 @@ def fetch_todo_list_progress(employee_id):
 
     print(f"User ID: {user_id} / Username: {username}")
 
-    todo_url = (
-            f"https://jsonplaceholder.typicode.com/todos?userId={employee_id}"
-    )
-    todo_response = requests.get(todo_url)
+    todo_response = requests.get(url + "todos", params={"useId": employee_id})
     todo_list = todo_response.json()
 
     filename = f"{user_id}.csv"
