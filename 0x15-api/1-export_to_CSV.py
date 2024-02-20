@@ -39,7 +39,7 @@ def fetch_todo_list_progress(employee_id):
         num_tasks = 0
         for task in todo_list:
             writer.writerow([
-                user_id, username, task['completed'], task['title']
+                user_id, username, task.get("completed"), task.get("title")
             ])
             num_tasks += 1
 
