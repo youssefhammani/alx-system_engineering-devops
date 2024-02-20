@@ -21,8 +21,8 @@ def fetch_todo_list_progress(employee_id):
         print("Employee not found.")
         return
 
-    user_id = employee_info["id"]
-    username = employee_info["username"]
+    user_id = employee_info.get("id")
+    username = employee_info.get("username")
 
     print(f"User ID: {user_id} / Username: {username}")
 
@@ -35,7 +35,7 @@ def fetch_todo_list_progress(employee_id):
     filename = f"{user_id}.csv"
 
     with open(filename, mode='w', newline='') as file:
-        writer = csv.writer(file)
+        writer = csv.writer(file, quoting=csv.QUOTE_ALL)
         writer.writerow([
             "USER_ID", "USERNAME", "TASK_COMPLETED_STATUS", "TASK_TITLE"
         ])
