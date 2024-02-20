@@ -1,36 +1,17 @@
 #!/usr/bin/python3
-"""
-Check student .CSV output of user information
-"""
-
+"""Script to export data in the CSV format"""
 import csv
-import requests
+import requests as r
 import sys
 
-users_url = "https://jsonplaceholder.typicode.com/users?id="
-todos_url = "https://jsonplaceholder.typicode.com/todos"
-
-
-def user_info(id):
-    """ Check user information """
-
-    total_tasks = 0
-    response = requests.get(todos_url).json()
-    for i in response:
-        if i['userId'] == id:
-            total_tasks += 1
-
-    num_lines = 0
-    with open(str(id) + ".csv", 'r') as f:
-        for line in f:
-            if not line == '\n':
-                num_lines += 1
-
-    if total_tasks == num_lines:
-        print("Number of tasks in CSV: OK")
-    else:
-        print("Number of tasks in CSV: Incorrect")
-
-
 if __name__ == "__main__":
-    user_info(int(sys.argv[1]))
+    user_id = sys.argv[1]
+    url = "https://jsonplaceholder.typicode.com/"
+    usr = r.get(url + "users/{}".format(user_id)).json()
+    username = usr.get("username")
+    to_do = r.get(url + "todos", params={"userId": user_id}).json()
+
+    with open("{}.csv".format(user_id), "w", newline="") as csvfile:
+        writer = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
+        [writer.writerow([user_id, username, elm.get("completed"),
+                          elm.get("title")]) for elm in to_do]
