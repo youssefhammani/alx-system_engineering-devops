@@ -26,7 +26,7 @@ def fetch_todo_list_progress(employee_id):
 
     print(f"User ID: {user_id} / Username: {username}")
 
-    todo_response = requests.get(url + "todos", params={"userId": employee_id})
+    todo_response = requests.get(url + "todos", params={"userId": user_id})
     todo_list = todo_response.json()
 
     filename = "{}.csv".format(user_id)
