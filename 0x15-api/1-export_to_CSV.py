@@ -43,7 +43,3 @@ if __name__ == "__main__":
     else:
         employee_id = argv[1]
         fetch_todo_list_progress(employee_id)
-
-    # Correct output formatting
-    msg = "User ID and Username: OK"
-    print(msg)
