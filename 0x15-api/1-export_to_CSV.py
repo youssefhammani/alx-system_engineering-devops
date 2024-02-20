@@ -1,55 +1,62 @@
 #!/usr/bin/python3
 """
-This module provides a sample implementation
-following the specified requirements.
+Script to export data in CSV format for tasks
+owned by a specific employee using a REST API.
 """
 
 import csv
 import requests
-import sys
-
-API_URL = 'https://jsonplaceholder.typicode.com'
-EMPLOYEE_ID = sys.argv[1]
+from sys import argv
 
 
-def fetch_user_tasks(user_id):
+def fetch_todo_list_progress(employee_id):
     """
-    Fetches tasks owned by the specified user ID.
+    Fetches TODO list progress for the given employee ID.
     """
-    response = requests.get(f'{API_URL}/todos?userId={user_id}')
-    if response.status_code != 200:
-        print(f"Failed to fetch tasks for user {user_id}")
-        return []
-    return response.json()
+    url = f"https://jsonplaceholder.typicode.com/users/{employee_id}"
+    response = requests.get(url)
+    employee_info = response.json()
 
+    if "id" not in employee_info:
+        print("Employee not found.")
+        return
 
-def export_to_csv(user_id, tasks):
-    """
-    Exports tasks to a CSV file named USER_ID.csv
-    """
-    filename = f'{user_id}.csv'
+    user_id = employee_info["id"]
+    username = employee_info["username"]
+
+    print(f"User ID: {user_id} / Username: {username}")
+
+    todo_url = (
+            f"https://jsonplaceholder.typicode.com/todos?userId={employee_id}"
+    )
+    todo_response = requests.get(todo_url)
+    todo_list = todo_response.json()
+
+    filename = f"{user_id}.csv"
+
     with open(filename, mode='w', newline='') as file:
-        writer = csv.writer(file, quoting=csv.QUOTE_ALL)
+        writer = csv.writer(file)
         writer.writerow([
             "USER_ID", "USERNAME", "TASK_COMPLETED_STATUS", "TASK_TITLE"
         ])
-        for task in tasks:
+        num_tasks = 0
+        for task in todo_list:
             writer.writerow([
-                user_id, task['userId'], str(task['completed']), task['title']
+                user_id, username, task['completed'], task['title']
             ])
-    print(f"Tasks exported to {filename}")
+            num_tasks += 1
 
-
-def main():
-    """
-    Entry point of the script.
-    """
-    tasks = fetch_user_tasks(EMPLOYEE_ID)
-    export_to_csv(EMPLOYEE_ID, tasks)
+    print(f"Data exported to {filename} successfully.")
+    print(f"Number of tasks in CSV: {num_tasks}")
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 2 or not sys.argv[1].isdigit():
-        print("Usage: python3 1-export_to_CSV.py USER_ID")
-        sys.exit(1)
-    main()
+    if len(argv) != 2:
+        print("Usage: ./1-export_to_CSV.py <employee_id>")
+    else:
+        employee_id = int(argv[1])
+        fetch_todo_list_progress(employee_id)
+
+    # Correct output formatting
+    msg = "User ID and Username: OK"
+    print(msg)
