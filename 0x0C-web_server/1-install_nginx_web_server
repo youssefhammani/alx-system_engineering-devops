@@ -1,18 +1,28 @@
 #!/usr/bin/env bash
-# install nginx web server
+# Installs Nginx with the following configurations:
+#+    Listens on port 80.
+#+    Returns a page containing "Hello World!" when queried
+#++    at the root with a curl GET request.
 
-# Update package list and install nginx
-sudo apt-get update -y
-sudo apt-get install nginx -y
+#  updates the package lists for available software packages.
+apt-get update
+# installs the Nginx web server.
+apt-get install -y nginx
 
-# Create a default HTML file with "Hello World!" content
-echo "Hello World!" | sudo tee /var/www/html/index.html > /dev/null
+# Creates the /etc/nginx/html directory, which will serve as the document root directory for Nginx.
+mkdir /etc/nginx/html
+#  creates an empty index.html file inside the /etc/nginx/html directory.
+touch /etc/nginx/html/index.html
+#  sets the content of the index.html file to "Hello World!" using the echo command.
+echo "Hello World!" > /etc/nginx/html/index.html
+# Sets Nginx to listen on port 80 and serve files from the /etc/nginx/html directory.
+printf %s "server {
+     listen      80;
+     listen      [::]:80 default_server;
+     root        /etc/nginx/html;
+     index       index.html index.htm;
+}
+" > /etc/nginx/sites-available/default
 
-# Ensure Nginx is listening on port 80
-sudo sed -i 's/listen 80 default_server;/listen 80;/g' /etc/nginx/sites-available/default
-
-# Restart Nginx without using systemctl
-sudo service nginx restart
-
-# Display success message
-echo "Nginx installed and configured successfully."
+# Restarts the Nginx service to apply the configuration changes.
+service nginx restart
